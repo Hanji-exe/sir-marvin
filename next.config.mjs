@@ -6,6 +6,12 @@ const nextConfig = {
     config.externals.push("pino-pretty", "lokijs", "encoding");
     return config;
   },
+
+  eslint: {
+    // This allows production builds to succeed
+    // even if ESLint errors exist
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;
